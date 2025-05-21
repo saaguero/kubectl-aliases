@@ -37,6 +37,7 @@ def main():
         ('ak', 'apply -k', None, ['sys']),
         ('k', 'kustomize', None, ['sys']),
         ('ex', 'exec -i -t', None, None),
+        ('ed', 'edit', None, None),
         ('lo', 'logs -f', None, None),
         ('lop', 'logs -f -p', None, None),
         ('p', 'proxy', None, ['sys']),
@@ -48,15 +49,15 @@ def main():
         ]
 
     res = [
-        ('po', 'pods', ['g', 'd', 'rm'], None),
-        ('dep', 'deployment', ['g', 'd', 'rm'], None),
-        ('sts', 'statefulset', ['g', 'd', 'rm'], None),
-        ('svc', 'service', ['g', 'd', 'rm'], None),
-        ('ing', 'ingress', ['g', 'd', 'rm'], None),
-        ('cm', 'configmap', ['g', 'd', 'rm'], None),
-        ('sec', 'secret', ['g', 'd', 'rm'], None),
-        ('no', 'nodes', ['g', 'd'], ['sys']),
-        ('ns', 'namespaces', ['g', 'd', 'rm'], ['sys']),
+        ('po', 'pods', ['g', 'd', 'rm', 'ed'], None),
+        ('dep', 'deployment', ['g', 'd', 'rm', 'ed'], None),
+        ('sts', 'statefulset', ['g', 'd', 'rm', 'ed'], None),
+        ('svc', 'service', ['g', 'd', 'rm', 'ed'], None),
+        ('ing', 'ingress', ['g', 'd', 'rm', 'ed'], None),
+        ('cm', 'configmap', ['g', 'd', 'rm', 'ed'], None),
+        ('sec', 'secret', ['g', 'd', 'rm', 'ed'], None),
+        ('no', 'nodes', ['g', 'd', 'ed'], ['sys']),
+        ('ns', 'namespaces', ['g', 'd', 'rm', 'ed'], ['sys']),
         ]
     res_types = [r[0] for r in res]
 
